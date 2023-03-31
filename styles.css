@@ -1,0 +1,243 @@
+
+/* I did not add any custom fonts as I dont know the name of the ones used on the example.
+    I did my best to recreate the example as better as I could */
+
+
+/* Simple reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    display: grid;
+    width: 100%;
+}
+
+
+/* HEADER OF PAGE */
+
+/* I had the most trouble trying to recreate the button on the header tht hides the about and contact informations.
+    All the places that I looked I found a way to do it using javascript, but I was not able to recreate it by myself using only HTML and CSS.
+    so I ended up recreating a simplyfied version without the button */
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px;
+    height: 150px;
+}
+
+header h1, h2{
+    line-height: 4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.about-section {
+    grid-column: 1;
+    text-align: start;
+    margin-left: 35%;
+    font-size: 1.1rem;
+}
+
+.about-section p {
+    color: #aaaaaa;
+}
+
+.contact-info {
+    grid-column: 2;
+    text-align: start;
+    margin-left: 30%;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 5px;
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-info a:visited{
+    color: #fff;
+}
+
+.contact-info a:hover{
+    text-decoration: underline;
+}
+
+
+/* INTRO ABOVE ALBUMS COVERS */
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f5f5f5;
+    height: 45vh;
+  }
+  
+  .intro h2 {
+    font-size: 3rem;
+    margin-top: auto;
+    margin-bottom: 10px;
+    font-weight: lighter;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    color:  #7a7a7a;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: #00a0df;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary {
+    background-color: #aaaaaa;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+
+/* GRID TO ARRANGE ALBUM CARDS */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-self: center;
+    align-items: center;
+    padding: 20px;
+    width: 70%;
+}
+
+/* FLEX TO STYLE ALBUM CARDS */
+.album-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-10px);
+}
+
+.album-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.album-card h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.album-card p {
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+/* In order to show that the buttons are links I changed the cursor to a pointer */
+.album-card button {
+    background-color: #00a0df;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.album-card button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.album-card button a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+.album-card button:hover {
+    background-color: #0092c6;
+}
+
+
+/* FOOTER OF PAGE */
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    height: 15vh;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text p {
+    margin: 0;
+    line-height: 2.5rem;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.link a {
+    text-decoration: none;
+    color: #0199ff;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
